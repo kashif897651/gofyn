@@ -1,0 +1,162 @@
+.card-container {
+  margin: 0 auto;
+}
+
+.card {
+  width: 280px;
+  float: left;
+  position: relative;
+  border: 1px solid #000000;
+  margin: 3px;
+}
+
+.card-container {
+  margin: 0 auto;
+}
+
+.card .img-responsive {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(184, 184, 184, 0.5);
+  top: 0%;
+  left: 0;
+  right: 0;
+  display: none;
+}
+
+.card:hover .overlay {
+  display: block;
+  text-align: center;
+}
+
+/*.imagecontainer
+
+{
+    margin: 30px 0;
+}*/
+
+.edit-icon {
+  width: 40px;
+  margin-top: 40%;
+  cursor: pointer;
+}
+
+.clearfix {
+  clear: both;
+}
+
+#myFile {
+  margin: 10px 0;
+  border: 1px solid;
+  padding: 10px 0px 10px 10px;
+  width: 100%;
+}
+#oldFile img {
+  max-height: 310px;
+  min-height: 300px;
+  object-fit: cover;
+}
+
+.cnfrmbutton {
+    color: #486ddc;
+    border: 1px solid #3338f7;
+    width: 44%;
+    background: #ffffff;
+    padding: 10px 25px;
+    margin: 5px 10px;
+    float: left;
+
+}
+
+.popupbody .img-responsive {
+  max-width: 100%;
+  width: 100%;
+}
+
+.newImage img {
+  margin-bottom: 10px;
+}
+.mypopup {
+  position: fixed;
+  top: 0;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  left: 0;
+  height: 100%;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  display: none;
+  opacity: 0;
+}
+
+.popupbody {
+  width: 60%;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 10px;
+  overflow: auto;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.fadeIn {
+  display: block;
+  opacity: 1;
+  z-index: 3;
+}
+
+@media only screen and (max-width:768px) {
+  .card .img-responsive {
+    max-height: 150px;
+  }
+  .card {
+    width: 100%;
+  }
+  #selectAlternativeImage .img-responsive {
+    margin-top: 30px;
+    max-width: 100%;
+    margin: 30px 0 0 0;
+    display: initial;
+  }
+  .alternateImageContainer {
+    text-align: center;
+  }
+  #myFile {
+    margin-left: 0;
+    width: 100%;
+  }
+  .edit-icon {
+    margin-top: 20%;
+  }
+  .popupbody
+  {
+    width: 100%;
+  }
+ #oldFile
+ {
+   margin-bottom: 10px;
+ }
+.cnfrmbutton
+{
+  width: 100%;
+  margin: 10px 0;
+}
+.fadeIn
+{
+  overflow: auto;
+}
+
+}
+

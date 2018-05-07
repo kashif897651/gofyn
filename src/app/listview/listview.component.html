@@ -1,0 +1,31 @@
+<div class="card-container container">
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6" *ngFor="let data of response">
+
+
+<div class="card" >
+  <div class="imagecontainer">
+    <img src="{{data.image_url}}" class="img-responsive">
+  </div>
+  <div class="overlay">
+    <img src="../assets/images/edit.png" class="edit-icon" (click)="editElement($event)">
+  </div>
+</div>
+</div>
+  <div class="clearfix"></div>
+</div>
+<div class="mypopup">
+  <div class="popupbody container">
+    <div class="row">
+      <div class="col-lg-6 col-dm-6 col-sm-6 col-xs-6" id="oldFile">
+        <img [src]=old_image class="img-responsive" />
+      </div>
+      <div class="col-lg-6 col-dm-6 col-sm-6 col-xs-6 newImage">
+        <img [src]="new_image" class="img-responsive" />
+        <input type="file" id="myFile" (change)="readURL($event)" />
+        <button class="cnfrmbutton" (click)="confirmCahgne()">Confirm Image</button>
+        <button class="cnfrmbutton" (click)="cancel()">cancel</button>
+      </div>
+
+    </div>
+  </div>
+</div>
