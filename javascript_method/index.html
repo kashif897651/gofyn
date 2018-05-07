@@ -1,0 +1,49 @@
+<!doctype>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script
+		src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</head>
+	<body onload="getData()"><!-- hitting API for fetching Data  on body load -->
+		<!-- container for cards -->
+		<div class="container card-container"></div>
+
+		<!-- popup modal  -->
+		<div class="modal fade" id="selectAlternativeImage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+					</div>
+					<div class="modal-body">
+						
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							<img src="" class="old_img img-responsive" />
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							<div class="col-lg-12 alternateImageContainer">
+								<img id="alternateImage" src="images/dummy.jpg" class="img-responsive" />
+							</div>
+							<div class="col-lg-12 fil-container">
+								<input type="file" id="myFile" onchange="readURL(this)">
+								<button id="confirm_Image" onclick="submitChange()">Confirm Image</button>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</body>
+</html>
